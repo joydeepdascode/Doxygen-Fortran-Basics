@@ -1,0 +1,4 @@
+<map id="square" name="square">
+<area shape="rect" id="node1" title="This subroutine calculates the square of a number." alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node2" href="$main_8_f90.html#aad704a674f6426392cf101884b565bea" title="This subroutine prints the result of a calculation." alt="" coords="120,5,216,32"/>
+</map>
