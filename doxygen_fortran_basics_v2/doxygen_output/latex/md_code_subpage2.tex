@@ -1,0 +1,31 @@
+\label{md_code_subpage2_subpage2}%
+\Hypertarget{md_code_subpage2_subpage2}%
+ {\bfseries{Using Doxygen to create an Introduction to the source code(\+A Markdown File)\+:}}
+
+\DoxyHorRuler{0}
+ {\itshape Initially, when starting to create documentation of the code, one feels to give a short introduction of the problem in hand and related stuffs. Also, a need to organize the pages in the Doxygen project, by creating a table of contents say. This is the main content to be discussed in this topic.}
+
+\DoxyHorRuler{0}
+
+
+Follow the below steps,
+\begin{DoxyEnumerate}
+\item {\bfseries{To create a mainpage}}\+: Create a mainpage file in the Doxygen input directory. And inside teh file enter, \begin{DoxyVerb}@mainpage <title_of_the_Mainpage>
+
+...Give the introduction to the problem in the project.. \end{DoxyVerb}
+
+\item {\bfseries{To create a page}}\+: Create a page1.\+md file in the Doxygen input directory. And inside the file enter, \begin{DoxyVerb}@page <page_identifier> <title_of_the_page>
+
+...Write a description of this page project.. \end{DoxyVerb}
+
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\bfseries{To create a page with Table of Contents}}\+: Create a \mbox{\hyperlink{subpage1_8md}{subpage1.\+md}} file in the Doxygen input directory. Inside the file add the {\ttfamily @}tableofcontents command to generate table of contents bar in the webpage.
+\item {\bfseries{To create a section in page}}\+: Say, you want to add a section in either the mainpage or subpage, to do that,
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\bfseries{In the mainpage\+:}} Type the following \begin{DoxyVerb}@section <section_identifier> <Section_name>
+\end{DoxyVerb}
+
+\item {\bfseries{In a subpage\+:}} Say, you create a subpage \char`\"{}page1.\+md\char`\"{}, to create a section type 
+\end{DoxyEnumerate}

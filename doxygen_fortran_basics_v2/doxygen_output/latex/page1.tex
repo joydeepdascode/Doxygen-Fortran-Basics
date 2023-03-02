@@ -1,0 +1,33 @@
+\hypertarget{page1_pg1}{}\doxysection{How to use Doxygen to create documentation of a source code written in Fortran}\label{page1_pg1}
+\DoxyHorRuler{0}
+ {\itshape A code is made up of paramters/variables, functions. Doxygen can be used to give description of these Parameters/\+Variables, Functions present inside a source code file. And how is that? It uses something called \char`\"{}\+Doxy comments\char`\"{} which starts with \char`\"{}!$>$ or !!\char`\"{} and after that syntax the Doxy description is written before the definition of the Parameters/\+Variables or Functions in the source code file.}
+
+\DoxyHorRuler{0}
+
+
+For fortran, say you have a source code directory, where some \mbox{\hyperlink{main_8_f90}{main.\+F90}} file is present. Assume, the \mbox{\hyperlink{main_8_f90}{main.\+F90}} file contains parameter \char`\"{}i\char`\"{}, some function \char`\"{}func1(x,y)\char`\"{}. Now, Doxygen can be used to give description of these parameters and functions as,
+\begin{DoxyEnumerate}
+\item {\bfseries{To add comments of the Paramter \char`\"{}i\char`\"{}}}\+: Type before the parameter definition present in the code,\begin{DoxyVerb}!> @param i <Describe the parameter> \end{DoxyVerb}
+
+\item {\bfseries{To add comments of the function \char`\"{}func1(x,y)\char`\"{}}}\+: First note, a function\textquotesingle{}s comments can be composed of \char`\"{}\+Variables\char`\"{}, \char`\"{}\+Return Output\char`\"{}, \char`\"{}\+Reference to Other functions\char`\"{}, \char`\"{}\+Additional Note\char`\"{},\char`\"{}\+Important Note to gather attention of user\char`\"{}, and \char`\"{}\+Some warning if exists\char`\"{}. The comments of all mentioned above have to be added in the lines before the function is mentioned, i.\+e.,
+\end{DoxyEnumerate}
+
+{\bfseries{Variables}}\+: Type before the variable definition\begin{DoxyVerb}!> @param x Define about x. \end{DoxyVerb}
+
+
+{\bfseries{Return Output}}\+: Type before the function definition to comment about the return,\begin{DoxyVerb}!> @return Mention the return details of the function.  \end{DoxyVerb}
+
+
+{\bfseries{Reference to Other functions}}\+: Type before the function definition to refer other functions,\begin{DoxyVerb}!> @see <name_of_function1> <name_of_funtion2>.  \end{DoxyVerb}
+
+
+{\bfseries{Additional Note}}\+: Type before the function definition to give an additional note,\begin{DoxyVerb}!> @note This is an additional note.  \end{DoxyVerb}
+
+
+{\bfseries{Attention grabbing message}}\+: Type before the function definition to give an attention grabbing message,\begin{DoxyVerb}!> @attention Type the message.  \end{DoxyVerb}
+
+
+{\bfseries{Some warning}}\+: Type before the function definition to give a warning,\begin{DoxyVerb}!> @warning Type the warning.  \end{DoxyVerb}
+
+
+Check the code of \mbox{\hyperlink{main_8_f90}{main.\+F90}} file, to see what is meant in the above {\bfseries{manual}}. 

@@ -1,0 +1,32 @@
+\label{md_code_page2_page2}%
+\Hypertarget{md_code_page2_page2}%
+ \hypertarget{md_code_page2_pg2}{}\doxysection{Using Doxygen to create an Introduction(\+A Markdown File) to the source code}\label{md_code_page2_pg2}
+\DoxyHorRuler{0}
+ {\itshape Initially, when starting to create documentation of the code, one feels to give a short introduction of the problem in hand and related stuffs. Also, a need to organize the pages in the Doxygen project, by creating a table of contents say. This is the main content to be discussed in this topic.}
+
+\DoxyHorRuler{0}
+
+
+Follow the below steps,
+\begin{DoxyEnumerate}
+\item {\bfseries{To create a mainpage}}\+: Create a mainpage file in the Doxygen input directory. And inside teh file enter, \begin{DoxyVerb}@mainpage <title_of_the_Mainpage>
+
+...Give the introduction to the problem in the project.. \end{DoxyVerb}
+
+\item {\bfseries{To create a page}}\+: Create a Page1 file in the Doxygen input directory, you can choose any name. And inside the file enter, \begin{DoxyVerb}@page <page_identifier> <title_of_the_page>
+
+...Write a description of this page project.. \end{DoxyVerb}
+
+\item {\bfseries{To create a page with Table of Contents}}\+: Create say, a Page1 file in the Doxygen input directory. Inside the file add the {\ttfamily @}tableofcontents command to generate table of contents bar in the webpage.
+\item {\bfseries{To create a section in page}}\+: Say, you want to add a section in either the mainpage or subpage, to do that,
+\begin{DoxyEnumerate}
+\item {\bfseries{In the mainpage\+:}} Type the following \begin{DoxyVerb}@section <unique_section_identifier> <Section_name>
+\end{DoxyVerb}
+
+\item {\bfseries{In a subpage\+:}} Say, you create a subpage \char`\"{}page1.\+md\char`\"{}, to create a section type \begin{DoxyVerb}@section <unique_section_identifier> <Section_name>
+\end{DoxyVerb}
+
+\end{DoxyEnumerate}
+\item {\bfseries{To add link of a section present in some page}}\+: Say, in \mbox{\hyperlink{md_code_page3_page3}{page3}}, you have a section with identifier \char`\"{}pg3\char`\"{} . Now, if I want to include the link of that section into any page I am working on, then I should type \begin{DoxyVerb}@ref pg3 \end{DoxyVerb}
+ this will show the section name corresponding to \char`\"{}pg3\char`\"{} and will create a link to it. 
+\end{DoxyEnumerate}
